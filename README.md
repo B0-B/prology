@@ -10,7 +10,7 @@
 &nbsp;2.2 [Hello World](#hello-world)<br>
 &nbsp;2.3 [Logging](#logging)<br>
 3. [Usage](#usage-prology.log.)<br>
-&nbsp;3.1 [logger](#logger)<br>
+&nbsp;3.1 [logger](#loggerfilepathnone-overwritefalse-object--logger)<br>
 &nbsp;&nbsp;3.1.1 [logger.note](#note)<br>
 &nbsp;&nbsp;3.1.2 [logger.mail](#mail)<br>
 &nbsp;3.2 [KeyLogger](#keylogger)<br>
@@ -128,7 +128,6 @@ is appended and logged as well into the `log.txt`.
 
 # Usage `prology.log.`
 
-## logger
 ## **logger**(***filepath***=None, ***overwrite***=False) [object] # {#logger}
 Main object for logging.<br>
 - **filepath [kwarg] (str)** <br>
@@ -140,7 +139,6 @@ Overwrite the file. If enabled you can call several logger instances from plenty
 
 <br>
 
-### note
 ### **logger.note**(***input***='', ***inputCol***=None, ***logType***='info', ***logTypeCol***=None,***showExcept***=True, ***timestamp***=True, ***fTree***=False, ***benchMark***=None, ***detatch***=False, ***save***=True, ***deliverTo***=None, ***subject***=None, ***wait***=None, ***forward***=True, ***forwardBlock***=False) [method]
 Main method for logging. The options can be altered via the arguments.The created note creates a block and may inject e.g. a logType block, sleep timer, or forward it to another object.<br>
 
