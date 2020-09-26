@@ -113,7 +113,7 @@ is appended and logged as well into the `log.txt`.
 
 <br>
 
-# Usage `prology.`
+# Usage `prology.log.`
 
 ## **logger**(***filepath***=None, ***overwrite***=False) [object]
 Main object for logging.<br>
@@ -240,3 +240,15 @@ One can basically pass through the input. For this call a detatched note call wh
 - **forwardBlock [kwarg] (bool)** <br>
 *Default: False* <br>
 Works only if [forward]() is True. If enabled the block will be forwarded, otherwise only the input will be forwarded as return.
+
+<br>
+<br>
+
+## **keyLogger**(***filepath***=None, ***overwrite***=False) [object]
+Wrapped logger instance ```keyLogger(logger)``` which takes same kwargs. After calling method start() all key events will be logged to the file in filepath. The logger is by default detatched. To **stop** the logger, simply type ```killlogger```.
+**Example**
+```python
+from prology.log import keyLogger
+kl = keyLogger('/path/to/log.txt')
+kl.start()
+```
