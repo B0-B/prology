@@ -2,6 +2,19 @@
 - [python 3.x](https://www.python.org/downloads/)
 - python3-pip (comes with python3 installation)
 
+
+# Index
+1. [Intro](#Forget-print)
+2. [Getting Started](#getting-started)<br>
+&nbsp;2.1 [Installation](#installation)<br>
+&nbsp;2.2 [Hello World](#hello-world)<br>
+&nbsp;2.3 [Logging](#logging)<br>
+3. [Usage](#usage-prology.log.)<br>
+&nbsp;3.1 [logger](#logger)<br>
+&nbsp;&nbsp;3.1.1 [logger.note](#note)<br>
+&nbsp;&nbsp;3.1.2 [logger.mail](#mail)<br>
+&nbsp;3.2 [KeyLogger](#keylogger)<br>
+
 # Forget print()
 You will never use print, sleep, mailing, or file handling again. prology was build with <3 to serve not only as a fancy console logger but also as a wise assistant within your python project and should save massive time when importing or writing commonly used routines. The prology logging goes beyond python, yet it may log every input event, and system wide as well. Not convinced? Give the following code lines a try:
 
@@ -115,7 +128,8 @@ is appended and logged as well into the `log.txt`.
 
 # Usage `prology.log.`
 
-## **logger**(***filepath***=None, ***overwrite***=False) [object]
+## logger
+## **logger**(***filepath***=None, ***overwrite***=False) [object] # {#logger}
 Main object for logging.<br>
 - **filepath [kwarg] (str)** <br>
 *Default: None* <br>
@@ -126,7 +140,8 @@ Overwrite the file. If enabled you can call several logger instances from plenty
 
 <br>
 
-### **logger.note**(***input***='', ***inputCol***=None, ***logType***='info', ***logTypeCol***=None,***showExcept***=True, ***timestamp***=True, ***fTree***=False, ***benchMark***=None, ***detatch***=False, ***save***=True, ***deliverTo***=None, ***subject***=None, ***wait***=None, ***forward***=True, ***forwardBlock***=False) [method] 
+### logger.note
+### **logger.note**(***input***='', ***inputCol***=None, ***logType***='info', ***logTypeCol***=None,***showExcept***=True, ***timestamp***=True, ***fTree***=False, ***benchMark***=None, ***detatch***=False, ***save***=True, ***deliverTo***=None, ***subject***=None, ***wait***=None, ***forward***=True, ***forwardBlock***=False) [method] {#note}
 Main method for logging. The options can be altered via the arguments.The created note creates a block and may inject e.g. a logType block, sleep timer, or forward it to another object.<br>
 
 - **input [kwarg] (object)** <br>
@@ -207,7 +222,10 @@ If disabled this block will not be saved to the filepath. If the filepath is not
 - **deliverTo [kwarg] (str or list)** <br>
 *Default: None* <br>
 Works only if the [logger.email]() method was called in advance. Provide a ```list``` with contact names or ```str``` with a single contact wo which to deliver the block via mail. Choose the subject for the mail via the argument [subject](). If ```'all'``` is provided, the block is sent to all known contacts specified in [logger.email]().<br>
+Now the 
+### mail example
 **Example**
+
     ```python
     log = logger()
     log.mail('yourmail@provider.com', 'decrypted password', contacts={'friend':'friendmail@provider.com'}, smtpServer='provider smtp', port=587)
@@ -242,10 +260,22 @@ One can basically pass through the input. For this call a detatched note call wh
 Works only if [forward]() is True. If enabled the block will be forwarded, otherwise only the input will be forwarded as return.
 
 <br>
+
+### logger.mail
+### **logger.mail**(***address***, ***password***, ***contacts***, ***smtpServer***=None, ***port***=587) [method] {#note}<br>
+Initializes the mail service. This method is mandatory for sending mails and should be called at the beginning of the script. For example see [here](#)
+- **address [arg] (str)** <br>
+Provide a sender email address.
+- **password [arg] (str)** <br>
+Provide a corresponding password.
+
+
 <br>
 
+## keyLogger
 ## **keyLogger**(***filepath***=None, ***overwrite***=False) [object]
 Wrapped logger instance ```keyLogger(logger)``` which takes same kwargs. After calling method start() all key events will be logged to the file in filepath. The logger is by default detatched. To **stop** the logger, simply type ```killlogger```.
+
 **Example**
 ```python
 from prology.log import keyLogger
