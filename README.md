@@ -72,7 +72,7 @@ log.note('Hello World!')
 
 <br>
 
-Every [logger.note](### logger.note) call internally creates a [block]() object - an editable string which can be customized using keyword argurments. This block by default yields a date-/```timestamp``` and a ```logType``` block indicating error, warning, info or some custom type, and it can be printed (default), saved (if a filepath was provided), forwarded to other functions (if forwarder was provided), send a mail containing the block or the raw input and many more.<br>
+Every ```logger.note``` call internally creates a block object - an editable string which can be customized using keyword argurments. This block by default yields a date-/```timestamp``` and a ```logType``` block indicating error, warning, info or some custom type, and it can be printed (default), saved (if a filepath was provided), forwarded to other functions (if forwarder was provided), send a mail containing the block or the raw input and many more.<br>
 Save your printing blocks using a new logger instance
 ``` python
 log = logger('./log.txt', overwrite=True)
