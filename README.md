@@ -3,7 +3,7 @@
 - python3-pip (comes with python3 installation)
 
 # Forget print()
-You will never use print, sleep, mailing, or file handling again. prology was build with <3 to serve not only as a fancy console logger but also as a wise assistant within your python project and should save massive time when importing or writing commonly used routines. The prology logging goes beyond python, yet it may log every input event, and system wide as well. Not convinced? Give the following 3 code lines a try:
+You will never use print, sleep, mailing, or file handling again. prology was build with <3 to serve not only as a fancy console logger but also as a wise assistant within your python project and should save massive time when importing or writing commonly used routines. The prology logging goes beyond python, yet it may log every input event, and system wide as well. Not convinced? Give the following code lines a try:
 
 ```python
 print('common printing ...')
@@ -13,7 +13,9 @@ print('common printing ...')
 ```
 
 ```python
-from prology import logger as log
+from prology.log import logger
+log = logger()
+
 log.note('fancy printing!')
 ```
 
@@ -35,7 +37,7 @@ Install the prology package system wide within seconds. Switch into the project 
 After installation import prology into your custom python `/project/` or file
 
 ```python
-from prology import logger
+from prology.log import logger
 log = logger()
 ```
 <br>
