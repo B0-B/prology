@@ -12,7 +12,7 @@
 3. [Usage](#usage-prology.log.)<br>
 &nbsp;3.1 [logger](#logger)<br>
 &nbsp;&nbsp;3.1.1 [logger.note](#note)<br>
-&nbsp;&nbsp;3.1.2 [logger.mail](#mail)<br>
+&nbsp;&nbsp;3.1.2 [logger.mail](###logger.mail)<br>
 &nbsp;3.2 [KeyLogger](#keylogger)<br>
 
 # Forget print()
@@ -72,14 +72,14 @@ log.note('Hello World!')
 
 <br>
 
-Every [logger.note]() call internally creates a [block]() object - an editable string which can be customized using keyword argurments. This block by default yields a date-/[timestamp]() and a [logType]() block indicating error, warning, info or some custom type, and it can be printed (default), saved (if a filepath was provided), forwarded to other functions (if forwarder was provided), send a mail containing the block or the raw input and many [more]().<br>
+Every [logger.note](### logger.note) call internally creates a [block]() object - an editable string which can be customized using keyword argurments. This block by default yields a date-/```timestamp``` and a ```logType``` block indicating error, warning, info or some custom type, and it can be printed (default), saved (if a filepath was provided), forwarded to other functions (if forwarder was provided), send a mail containing the block or the raw input and many more.<br>
 Save your printing blocks using a new logger instance
 ``` python
 log = logger('./log.txt', overwrite=True)
 logger.note('This will be appended in the log file')
 logger.note('This will be appended as well')
 ```
-every note call called from this logger will be printed if `detatch` flag is False (default) and be logged into the provided path. The root-directory is always the current working directory see [os.getcwd()]() which is your `/project/` directory.
+every note call called from this logger will be printed if `detatch` flag is False (default) and be logged into the provided path. The root-directory is always the current working directory see [os.getcwd()](https://docs.python.org/3/library/os.html) which is your `/project/` directory.
 ```
 ~ /project/$ nano log.txt
 
@@ -121,7 +121,7 @@ grandParentCaller()
 
 ```
 
-In the above example the block contains the function tree [fTree]() which allows you to see the calling branch and the original input but also the exception
+In the above example the block contains the function tree ```fTree```which allows you to see the calling branch and the original input but also the exception
 is appended and logged as well into the `log.txt`.
 
 <br>
@@ -221,9 +221,7 @@ If disabled this block will not be saved to the filepath. If the filepath is not
 
 - **deliverTo [kwarg] (str or list)** <br>
 *Default: None* <br>
-Works only if the [logger.email]() method was called in advance. Provide a ```list``` with contact names or ```str``` with a single contact wo which to deliver the block via mail. Choose the subject for the mail via the argument [subject](). If ```'all'``` is provided, the block is sent to all known contacts specified in [logger.email]().<br>
-Now the 
-### mail example
+Works only if the [logger.email](###logger.mail) method was called in advance. Provide a ```list``` with contact names or ```str``` with a single contact wo which to deliver the block via mail. Choose the subject for the mail via the argument [subject](). If ```'all'``` is provided, the block is sent to all known contacts specified in [logger.email](###logger.mail).<br>
 **Example**
 
     ```python
@@ -263,11 +261,17 @@ Works only if [forward]() is True. If enabled the block will be forwarded, other
 
 ### logger.mail
 ### **logger.mail**(***address***, ***password***, ***contacts***, ***smtpServer***=None, ***port***=587) [method] {#note}<br>
-Initializes the mail service. This method is mandatory for sending mails and should be called at the beginning of the script. For example see [here](#)
+Initializes the mail service. This method is mandatory for sending mails and should be called at the beginning of the script. For example see [here](###mail-example).
 - **address [arg] (str)** <br>
 Provide a sender email address.
 - **password [arg] (str)** <br>
 Provide a corresponding password.
+- **contact [arg] (dict)** <br>
+Provide a dict object filled with contacts by the scheme ```contact_name``` : ```contact_email``` both as string.
+- **smtpServer[arg] (str)** <br>
+Smpt server of the sender's provider. Optional.
+- **port[arg] (int)** <br>
+Provider port.
 
 
 <br>
