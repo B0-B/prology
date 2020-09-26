@@ -128,14 +128,14 @@ is appended and logged as well into the `log.txt`.
 
 # Usage `prology.log.`
 
-## **logger**(***filepath***=None, ***overwrite***=False) [object] # {#logger}
+## **logger**(***filepath***=None, ***overwrite***=False) [object]
 Main object for logging.<br>
 - **filepath [kwarg] (str)** <br>
 *Default: None* <br>
 Provide a filepath to which to log. Absolute and relative paths as well as custom file extensions are possible. The root path is the current working directory. <br>
 - **overwrite [kwarg] (bool)** <br>
 *Default: False* <br>
-Overwrite the file. If enabled you can call several logger instances from plenty apps which will all append logs to the same file but make sure to give every logger instance a custom [logType]() to distinguish them. <br>
+Overwrite the file. If disabled you can call several logger instances from plenty apps which will all append logs to the same file but make sure to give every logger instance a custom [logType]() to distinguish them. <br>
 
 <br>
 
