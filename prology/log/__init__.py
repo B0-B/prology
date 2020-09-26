@@ -268,8 +268,8 @@ class keyLogger(logger):
 
         '''
         After running this method the logger will start either silently or 
-        in a console. To break the logger you must type "kill keylogger" 
-        independent of your current environment.
+        in a console. To break the logger you must type "killlogger" 
+        in any environment.
         '''
 
         self.keys = [] 
