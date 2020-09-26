@@ -12,7 +12,7 @@
 3. [Usage](#usage-prology.log.)<br>
 &nbsp;3.1 [logger](#logger)<br>
 &nbsp;&nbsp;3.1.1 [logger.note](#note)<br>
-&nbsp;&nbsp;3.1.2 [logger.mail](###logger.mail)<br>
+&nbsp;&nbsp;3.1.2 [logger.mail](#mail)<br>
 &nbsp;3.2 [KeyLogger](#keylogger)<br>
 
 # Forget print()
@@ -140,8 +140,8 @@ Overwrite the file. If enabled you can call several logger instances from plenty
 
 <br>
 
-### logger.note
-### **logger.note**(***input***='', ***inputCol***=None, ***logType***='info', ***logTypeCol***=None,***showExcept***=True, ***timestamp***=True, ***fTree***=False, ***benchMark***=None, ***detatch***=False, ***save***=True, ***deliverTo***=None, ***subject***=None, ***wait***=None, ***forward***=True, ***forwardBlock***=False) [method] {#note}
+### note
+### **logger.note**(***input***='', ***inputCol***=None, ***logType***='info', ***logTypeCol***=None,***showExcept***=True, ***timestamp***=True, ***fTree***=False, ***benchMark***=None, ***detatch***=False, ***save***=True, ***deliverTo***=None, ***subject***=None, ***wait***=None, ***forward***=True, ***forwardBlock***=False) [method]
 Main method for logging. The options can be altered via the arguments.The created note creates a block and may inject e.g. a logType block, sleep timer, or forward it to another object.<br>
 
 - **input [kwarg] (object)** <br>
@@ -259,9 +259,9 @@ Works only if [forward]() is True. If enabled the block will be forwarded, other
 
 <br>
 
-### logger.mail
-### **logger.mail**(***address***, ***password***, ***contacts***, ***smtpServer***=None, ***port***=587) [method] {#note}<br>
-Initializes the mail service. This method is mandatory for sending mails and should be called at the beginning of the script. For example see [here](###mail-example).
+### mail
+### **logger.mail**(***address***, ***password***, ***contacts***, ***smtpServer***=None, ***port***=587) [method]<br>
+Initializes the mail service. This method is mandatory for sending mails and should be called at the beginning of the script. For example see ```deliverTo```.
 - **address [arg] (str)** <br>
 Provide a sender email address.
 - **password [arg] (str)** <br>
