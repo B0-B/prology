@@ -176,10 +176,6 @@ Enable/Disable python exceptions in your block. This can be switched to True eve
 *Default: True* <br>
 Enable/Disable date and time block in your note. By default a time stamp is printed ```[26.09.20 17:52:22]```.
 
-- **showExcept [kwarg] (bool)** <br>
-*Default: True* <br>
-Enable/Disable python exceptions in your block. This can be switched to True everytime there is no real python error.<br>
-
 - **fTree [kwarg] (bool)** <br>
 *Default: False* <br>
 Enable/Disable the call tree printing in your note. See the [getting started]() for better instance. The following call tree will be added to your note ```[call tree: grandParentCaller > parentCaller > Function > logTypeCall]```.
