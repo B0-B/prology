@@ -16,7 +16,7 @@
 &nbsp;3.2 [KeyLogger](#keylogger)<br>
 
 # Forget print()
-You will never use print, sleep, mailing, or file handling again. prology was build to serve not only as a fancy console logger but also as a wise assistant within your python project supposed to save tons of hours for common routines. The prology logging goes beyond python, yet it may log every input event, and system wide as well. Not convinced? Take a look:
+You will never use print, sleep, mailing, or file handling again. prology was build to serve not only as a fancy console logger but also as a wise assistant within your python project supposed to save tons of hours for common routines. The prology logging goes beyond python,  and yet may log every input event system wide. Not convinced? Take a look:
 
 ```python
 print('common printing ...')
@@ -79,7 +79,7 @@ log = logger('./log.txt', overwrite=True)
 logger.note('This will be appended in the log file')
 logger.note('This will be appended as well')
 ```
-Every note call called from this logger will be printed if `detatch` flag is False (default) and be logged into the provided path. The root-directory is always the current working directory see [os.getcwd()](https://docs.python.org/3/library/os.html) which is your `/project/` directory.
+Every note call called from this logger will be printed if `detatch` flag is False (default) and logged into the provided path. The root-directory is always the current working directory see [os.getcwd()](https://docs.python.org/3/library/os.html) which is your `/project/` directory.
 ```
 ~ /project/$ nano log.txt
 
@@ -121,8 +121,7 @@ grandParentCaller()
 
 ```
 
-In the above example the block contains the function tree ```fTree```which allows you to see the calling branch and the original input but also the exception
-is appended and logged as well into the `log.txt`.
+In the above example the note contains the function tree ```fTree``` block which allows you to see the calling branch and the original input. Note that by default the exception stdout is appended and logged into the `log.txt` accordingly.
 
 <br>
 
@@ -132,7 +131,7 @@ is appended and logged as well into the `log.txt`.
 Main object for logging.<br>
 - **filepath [kwarg] (str)** <br>
 *Default: None* <br>
-Provide a filepath to which to log. Absolute and relative paths as well as custom file extensions are possible. The root path is the current working directory. <br>
+Log file path. Absolute and relative paths as well as custom file extensions are possible. The root path is the current working directory. <br>
 - **overwrite [kwarg] (bool)** <br>
 *Default: False* <br>
 Overwrite the file. If disabled you can call several logger instances from plenty apps which will all append logs to the same file but make sure to give every logger instance a custom [logType]() to distinguish them. <br>
@@ -140,7 +139,7 @@ Overwrite the file. If disabled you can call several logger instances from plent
 <br>
 
 ### **logger.note**(***input***='', ***inputCol***=None, ***logType***='info', ***logTypeCol***=None,***showExcept***=True, ***timestamp***=True, ***fTree***=False, ***benchMark***=None, ***detatch***=False, ***save***=True, ***deliverTo***=None, ***subject***=None, ***wait***=None, ***forward***=True, ***forwardBlock***=False) [method]
-Main method for logging. The options can be altered via the arguments.The created note creates a block and may inject e.g. a logType block, sleep timer, or forward it to another object.<br>
+Main method for logging. The options can be altered via arguments.The created note creates a block and may inject e.g. a logType block, sleep timer, or forward it to another object.<br>
 
 - **input [kwarg] (object)** <br>
 *Default: str('')* <br>
