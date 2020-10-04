@@ -16,7 +16,7 @@
 &nbsp;3.2 [KeyLogger](#keylogger)<br>
 
 # Forget print()
-You will never use print, sleep, mailing, or file handling again. prology was build with <3 to serve not only as a fancy console logger but also as a wise assistant within your python project and should save massive time when importing or writing commonly used routines. The prology logging goes beyond python, yet it may log every input event, and system wide as well. Not convinced? Give the following code lines a try:
+You will never use print, sleep, mailing, or file handling again. prology was build to serve not only as a fancy console logger but also as a wise assistant within your python project supposed to save tons of hours for common routines. The prology logging goes beyond python, yet it may log every input event, and system wide as well. Not convinced? Take a look:
 
 ```python
 print('common printing ...')
@@ -41,13 +41,13 @@ log.note('fancy printing!')
 # Getting Started
 
 ## Installation
-Install the prology package system wide within seconds. Switch into the project root directory and type
+Install within the prology root directory prompt
 
 ```bash
 ~ prology/$ pip3 install .
 ```
 
-After installation import prology into your custom python `/project/` or file
+then import prology into a custom python e.g. `/project/`
 
 ```python
 from prology.log import logger
@@ -72,14 +72,14 @@ log.note('Hello World!')
 
 <br>
 
-Every ```logger.note``` call internally creates a block object - an editable string which can be customized using keyword argurments. This block by default yields a date-/```timestamp``` and a ```logType``` block indicating error, warning, info or some custom type, and it can be printed (default), saved (if a filepath was provided), forwarded to other functions (if forwarder was provided), send a mail containing the block or the raw input and many more.<br>
-Save your printing blocks using a new logger instance
+Every call of ```logger.note``` dynamically creates a format string with plenty of methods appended. This ***note*** may yield several ***blocks*** which are substring functionals. By default, notes yields a ```timestamp``` and a ```logType``` block which indicates errors, warnings, just an info, or custom made types, and it can be printed, saved (if a filepath was provided), forwarded to other functions (if forwarder was provided), send a mail containing the block or the raw input and much more!<br>
+Save your printing blocks using a new logger instance:
 ``` python
 log = logger('./log.txt', overwrite=True)
 logger.note('This will be appended in the log file')
 logger.note('This will be appended as well')
 ```
-every note call called from this logger will be printed if `detatch` flag is False (default) and be logged into the provided path. The root-directory is always the current working directory see [os.getcwd()](https://docs.python.org/3/library/os.html) which is your `/project/` directory.
+Every note call called from this logger will be printed if `detatch` flag is False (default) and be logged into the provided path. The root-directory is always the current working directory see [os.getcwd()](https://docs.python.org/3/library/os.html) which is your `/project/` directory.
 ```
 ~ /project/$ nano log.txt
 
@@ -87,7 +87,7 @@ every note call called from this logger will be printed if `detatch` flag is Fal
 [info][26.09.20 13:58:42]: This will be appended as well
 ```
 
-You have a large project with many cross imports or chained function calls? You are bored searching for bugs in a call chain? <br> No worries! **prology** keeps track of the function branch from which the `logger.note` method was called.
+You have a large project with many cross imports or confusing function calls? You are bored searching for bugs throughout a long chain of calls? <br> No worries! **prology** keeps track of the function branch from which the `logger.note` method was called.
 
 ```python
 def brokenFunction():
