@@ -72,7 +72,7 @@ log.note('Hello World!')
 
 <br>
 
-Every call of ```logger.note``` dynamically creates a format string with plenty of methods appended. This ***note*** may yield several ***blocks*** which are substring functionals. By default, notes yields a ```timestamp``` and a ```logType``` block which indicates errors, warnings, just an info, or custom made types, and it can be printed, saved (if a filepath was provided), forwarded to other functions (if forwarder was provided), send a mail containing the block or the raw input and much more!<br>
+Every call of ```logger.note``` dynamically creates a format string with plenty of methods appended. This ***note*** may yield several ***blocks*** which are substring functionals. By default, notes yields a ```timestamp``` and a ```logType``` block which indicates errors, warnings, just an info, or custom made types, and it can be printed, saved (if a filepath was provided), forwarded to other functions (if forwarder was provided), delivered with email containing the block or the raw input and much more!<br>
 Save your printing blocks using a new logger instance:
 ``` python
 log = logger('./log.txt', overwrite=True)
