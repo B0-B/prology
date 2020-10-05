@@ -1,6 +1,10 @@
 ## Dependencies
 - [python 3.x](https://www.python.org/downloads/)
 - python3-pip (comes with python3 installation)
+## Acknowledging
+Comes automatically with installation:
+- [pynput](https://github.com/moses-palmer/pynput)
+- [pyttsx3](https://github.com/nateshmbhat/pyttsx3)
 
 
 # Index

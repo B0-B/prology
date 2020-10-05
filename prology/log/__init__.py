@@ -14,6 +14,7 @@ from time import sleep, time
 import smtplib
 import pynput
 from pynput.keyboard import Listener, Key
+import pyttsx3
 
 class logger:
 
@@ -38,6 +39,14 @@ class logger:
         self.UNDERLINE = '\033[4m'
         #---------------------#
 
+        #---- speaking service ----#
+        rate = 1.0
+        self.engine = pyttsx3.init()
+        self.voices = self.engine.getProperty('voices')
+        self.engine.setProperty('voice', "english")
+        self.engine.setProperty('rate', int(rate*200))
+        #--------------------------#
+
         self.mailService = False
 
     def email(self, address, password, contacts, smtpServer=None, port=587):
@@ -60,7 +69,7 @@ class logger:
 
     def note(self, input='', inputCol=None, logType='info', logTypeCol=None, showExcept=True, timestamp=True, fTree=False, 
             benchMark=None, detatch=False, save=True, deliverTo=None, subject=None, wait=None,
-            forward=True, forwardBlock=False):
+            forward=True, forwardBlock=False, speak=False):
 
         # begin new block and ColorBlock
         block = ''
@@ -245,16 +254,32 @@ class logger:
         if wait != None:
             sleep(int(wait))
 
-        # forward
-        if forward:
+        try:    # async work-around :)
+            # forward
+            if forward:
 
-            if forwardBlock:
+                if forwardBlock:
 
-                return block
-            
-            else:
+                    return block
+                
+                else:
 
-                return input
+                    return input
+
+        finally: # everything here will come after the return of the function
+
+            # speaking
+            if speak:
+
+                try:
+
+                    self.engine.say(input)
+                    self.engine.runAndWait()
+
+                except:
+
+                    print_exc()
+
 
 class keyLogger(logger):
 
