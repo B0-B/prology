@@ -41,12 +41,16 @@ class logger:
 
         #---- speaking service ----#
         rate = 1.0
-        self.engine = pyttsx3.init()
-        self.voices = self.engine.getProperty('voices')
-        self.engine.setProperty('voice', "english")
-        self.engine.setProperty('rate', int(rate*200))
+        try:
+            self.engine = pyttsx3.init()
+            self.voices = self.engine.getProperty('voices')
+            self.engine.setProperty('voice', "english")
+            self.engine.setProperty('rate', int(rate*200))
+        except:
+            print(f'[{self.WARNING}warning{self.ENDC}]: failed loading pyttsx3.')
         #--------------------------#
 
+        # initialize mail service in disabled state
         self.mailService = False
 
     def email(self, address, password, contacts, smtpServer=None, port=587):
