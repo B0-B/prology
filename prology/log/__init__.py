@@ -7,11 +7,13 @@ information of various kinds and is able to traceback bugs
 and function trees.
 '''
 
+# built-in dependencies
 import os, inspect, sys
 from traceback import format_exc, print_exc
 from datetime import datetime
 from time import sleep, time
 import smtplib
+# external dependencies
 import pynput
 from pynput.keyboard import Listener, Key
 import pyttsx3

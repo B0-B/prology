@@ -20,7 +20,7 @@ Comes automatically with installation:
 &nbsp;3.2 [KeyLogger](#keylogger)<br>
 
 # Forget print()
-You will never use print, sleep, mailing, or file handling again. prology was build to serve not only as a fancy console logger but also as a wise assistant within your python project to save you tons of hours for common routines. The prology logging goes beyond python,  and yet may log every input event system wide. Not convinced? Take a look:
+Say good bye to print and hello to prology! This package was build to serve not only as a fancy console logger but moreover as a wise assistant within your python project to save you tons of hours for common routines. The prology logging goes beyond python,  and yet may log every input event system wide. Not convinced? Take a look:
 
 ```python
 print('common printing ...')
