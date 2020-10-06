@@ -5,5 +5,6 @@
     "author_email" : "alch3mist94@protonmail.com",
     "description" : "You will never use print, sleep, mailing, or file handling again. prology was build with <3 to serve not only as a fancy console logger but also as a wise assistant within your python project and should save massive time when importing or writing commonly used routines. The prology logging goes beyond python, yet it may log every input event, and system wide as well.",
     "url" : "https://gitlab.com/alch3mist/prology",
-    "licence" : "GNU"
+    "licence" : "GNU",
+    "dependencies" : "pyttsx3;pynput"
 }

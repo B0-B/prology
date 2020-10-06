@@ -17,9 +17,7 @@ def install():
         author_email = body['author_email'],
         description = body['description'],
         url = body['url'],
-        install_requires=[
-          'pyttsx3', 'pynput'
-      ],
+        install_requires = body['dependencies'].split(';'),
     )
 
 if __name__ == "__main__":
