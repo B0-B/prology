@@ -160,7 +160,7 @@ Overwrite the file. If disabled you can call several logger instances from plent
 
 <br>
 
-### **logger.note**(***input***='', ***inputCol***=None, ***logType***='info', ***logTypeCol***=None,***showExcept***=True, ***timestamp***=True, ***fTree***=False, ***benchMark***=None, ***detatch***=False, ***save***=True, ***deliverTo***=None, ***subject***=None, ***wait***=None, ***forward***=True, ***forwardBlock***=False) [method]
+### **logger.note**(***input***='', ***inputCol***=None, ***logType***='info', ***logTypeCol***=None,***showExcept***=True, ***timestamp***=True, ***fTree***=False, ***benchMark***=None, ***detatch***=False, ***save***=True, ***deliverTo***=None, ***subject***=None, ***wait***=None, ***speak***=None, ***forward***=True, ***forwardBlock***=False) [method]
 Main method for logging. The options can be altered via arguments.The created note creates a block and may inject e.g. a logType block, sleep timer, or forward it to another object.<br>
 
 - **input [kwarg] (object)** <br>
