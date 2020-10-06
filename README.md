@@ -1,3 +1,13 @@
+## Features
+- 📌    Simple & Powerful Standard Output with Notes
+- ⌨️     Keylogging
+- 📨    Mail Delivery
+- ⏱ Benchmark Testing
+- 🔊    Text-to-Speech
+- 🚨    logging and informing on alerts
+- ⚙️    Customizable
+- 🧲    Attractive
+
 ## Dependencies
 - [python 3.x](https://www.python.org/downloads/)
 - python3-pip (comes with python3 installation)
