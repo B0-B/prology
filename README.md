@@ -57,7 +57,15 @@ then import prology into a custom python e.g. `/project/`
 from prology.log import logger
 log = logger()
 ```
+If an import error occurs during above initialization, this is probably because [espeak](http://espeak.sourceforge.net/) is not installed yet. This can be solved by using (with sudo rights)
+```bash
+apt-get update && sudo apt-get install espeak
+```
+
+
+
 <br>
+
 
 ## Hello World in prology 
 
@@ -128,6 +136,14 @@ grandParentCaller()
 In the above example the note contains the function tree ```fTree``` block which allows you to see the calling branch and the original input. Note that by default the exception stdout is appended and logged into the `log.txt` accordingly.
 
 <br>
+
+## Text to Speach
+
+Bring your logger to life by one single bool flag
+```python
+log.note('I am alive!', speak=True)
+```
+and listen to the voice of your logger. A useful option for alerting, informing or speach software development.
 
 # Usage `prology.log.`
 
@@ -234,6 +250,10 @@ Provide a subject for the [deliverTo]() argument. If None, the subject will be s
 - **wait [kwarg] (int)** <br>
 *Default: None* <br>
 If activated i.e. if an integer is provided, the note call will sleep for this amount in seconds. This makes ```import time.sleep``` unnecessary.
+
+- **speak [kwarg] (int)** <br>
+*Default: False* <br>
+If enabled the input will be played via audio (male, british, medium velocity).
 
 - **forward [kwarg] (bool)** <br>
 *Default: True* <br>

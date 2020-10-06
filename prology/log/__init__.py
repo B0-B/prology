@@ -40,14 +40,14 @@ class logger:
         #---------------------#
 
         #---- speaking service ----#
-        rate = 1.0
+        self.rate = 0.5
         try:
             self.engine = pyttsx3.init()
             self.voices = self.engine.getProperty('voices')
             self.engine.setProperty('voice', "english")
-            self.engine.setProperty('rate', int(rate*200))
-        except:
-            print(f'[{self.WARNING}warning{self.ENDC}]: failed loading pyttsx3.')
+            self.engine.setProperty('rate', int(self.rate*200))
+        except OSError:
+            print(f'[{self.WARNING}warning{self.ENDC}]: failed loading pyttsx3. No espeak installed on your system\nTry to install espeak using {self.WARNING}sudo apt-get update && sudo apt-get install espeak{self.ENDC}')
         #--------------------------#
 
         # initialize mail service in disabled state
@@ -70,7 +70,7 @@ class logger:
         else:
             self.smtpServer = 'smtp.' + self.address.split('@')[-1]
         self.port = port
-
+    
     def note(self, input='', inputCol=None, logType='info', logTypeCol=None, showExcept=True, timestamp=True, fTree=False, 
             benchMark=None, detatch=False, save=True, deliverTo=None, subject=None, wait=None,
             forward=True, forwardBlock=False, speak=False):
