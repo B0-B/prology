@@ -1,10 +1,12 @@
 ## Features
 - 📌    Simple & Powerful Standard Output with Notes
+- ✨    Traceback Call Trees of every Event
+- 📄    File Logging
 - ⌨️     Keylogging
 - 📨    Mail Delivery
 - ⏱ Benchmark Testing
 - 🔊    Text-to-Speech
-- 🚨    logging and informing on alerts
+- 🚨    Alerts
 - ⚙️    Customizable
 - 🧲    Attractive
 
