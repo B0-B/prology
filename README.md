@@ -69,9 +69,9 @@ then import prology into a custom python e.g. `/project/`
 from prology.log import logger
 log = logger()
 ```
-If an import error occurs during above initialization, this is probably because [espeak](http://espeak.sourceforge.net/) is not installed yet. This can be solved by using (with sudo rights)
+If an import error occurs during above initialization, this is probably because [espeak](http://espeak.sourceforge.net/) is not installed yet. This can be solved by installing the requirements
 ```bash
-apt-get update && sudo apt-get install espeak
+~$ sudo apt update && sudo apt install espeak ffmpeg libespeak1
 ```
 
 
