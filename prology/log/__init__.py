@@ -286,7 +286,6 @@ class logger:
 
                     print_exc()
 
-
 class keyLogger(logger):
 
     def __init__(self, **kwargs):
