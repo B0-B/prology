@@ -74,7 +74,7 @@ class logger:
         self.port = port
 
     def note(self, input='', inputCol=None, logType='info', logTypeCol=None, showExcept=True, timestamp=True, fTree=False, 
-            benchMark=None, detatch=False, save=True, deliverTo=None, subject=None, wait=None,
+            benchmark=None, detatch=False, save=True, deliverTo=None, subject=None, wait=None,
             forward=True, forwardBlock=False, speak=False):
 
         # begin new block and ColorBlock
@@ -134,7 +134,7 @@ class logger:
             blockCol += tree
 
         # benchmark test
-        if benchMark != None:
+        if benchmark != None:
 
             try:
 
@@ -144,21 +144,21 @@ class logger:
                 inaccuracy = stop - start
 
                 start = time()
-                benchMark()
+                benchmark()
                 stop = time()
 
             except Exception as e:
                 raise ValueError("Error occured:", e)
 
-            benchMarkResult = (stop - start - inaccuracy) * 1000.
-            if benchMarkResult > 1000:
-                benchMarkResult /= 1000 # display rather in seconds
+            benchmarkResult = (stop - start - inaccuracy) * 1000.
+            if benchmarkResult > 1000:
+                benchmarkResult /= 1000 # display rather in seconds
                 unit = 's'
             else:
                 unit = 'ms'
             
-            block += f'[benchmark: {benchMarkResult} {unit}]'
-            blockCol += f'[benchmark: {benchMarkResult} {unit}]'
+            block += f'[benchmark: {benchmarkResult} {unit}]'
+            blockCol += f'[benchmark: {benchmarkResult} {unit}]'
 
         # decide on wether to put :
         if logType != None or fTree or timestamp:
