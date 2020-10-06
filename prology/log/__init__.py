@@ -70,7 +70,7 @@ class logger:
         else:
             self.smtpServer = 'smtp.' + self.address.split('@')[-1]
         self.port = port
-    
+
     def note(self, input='', inputCol=None, logType='info', logTypeCol=None, showExcept=True, timestamp=True, fTree=False, 
             benchMark=None, detatch=False, save=True, deliverTo=None, subject=None, wait=None,
             forward=True, forwardBlock=False, speak=False):
@@ -247,7 +247,7 @@ class logger:
 
             else:
 
-                print("[Error]: No mail defined. Run logger.mail(args) ..")
+                print("[warning]: No mail defined. Run logger.mail(args) ..")
 
         # if not to log into console
         if not detatch:

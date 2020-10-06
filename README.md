@@ -145,6 +145,8 @@ log.note('I am alive!', speak=True)
 ```
 and listen to the voice of your logger. A useful option for alerting, informing or speach software development.
 
+<br><br>
+
 # Usage `prology.log.`
 
 ## **logger**(***filepath***=None, ***overwrite***=False) [object]
@@ -251,9 +253,9 @@ Provide a subject for the [deliverTo]() argument. If None, the subject will be s
 *Default: None* <br>
 If activated i.e. if an integer is provided, the note call will sleep for this amount in seconds. This makes ```import time.sleep``` unnecessary.
 
-- **speak [kwarg] (int)** <br>
+- **speak [kwarg] (bool)** <br>
 *Default: False* <br>
-If enabled the input will be played via audio (male, british, medium velocity).
+If enabled the input will be played via audio (male, british, medium velocity). Note that except the forwarding, all other processes were finished. The forwarding will continue after the speech playback is finished which may lead to wait times in your code.
 
 - **forward [kwarg] (bool)** <br>
 *Default: True* <br>
