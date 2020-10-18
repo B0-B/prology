@@ -1,0 +1,4 @@
+[info][18.10.20 23:22:08]: das ist ein test
+[info][18.10.20 23:22:37]: das ist ein test 2
+[info][19.10.20 00:12:40]: das ist ein test 2
+[info][19.10.20 00:12:45]: Hashbock
