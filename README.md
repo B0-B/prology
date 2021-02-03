@@ -1,3 +1,5 @@
+<p style="text-align: center;"><h2>prology</h2></p>
+
 ## Features
 - 📌    Simple & Powerful Standard Output with Notes
 - ✨    Traceback Call Trees of every Event
