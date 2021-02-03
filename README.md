@@ -5,6 +5,7 @@
 - ⌨️     Keylogging
 - 📨    Mail Delivery
 - ⏱ Benchmark Testing
+- :zzz: Sleeper
 - 🔊    Text-to-Speech
 - 🚨    Alerts
 - ⚙️    Customizable
