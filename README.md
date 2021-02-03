@@ -1,4 +1,4 @@
-<p style="text-align: center;"><h2>prology</h2></p>
+<h2 align="center">prology</h2>
 
 ## Features
 - 📌    Simple & Powerful Standard Output with Notes
