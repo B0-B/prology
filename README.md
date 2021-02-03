@@ -1,4 +1,5 @@
-<h2 align="center">prology</h2>
+<h3 align="center">prology</h3>
+<p class="text-gray mb-2" align="center">I present a clever logger and assistant for python.</p>
 
 ## Features
 - 📌    Simple & Powerful Standard Output with Notes
