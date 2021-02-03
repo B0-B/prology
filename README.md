@@ -149,13 +149,13 @@ In the above example the note contains the function tree ```fTree``` block which
 
 <br>
 
-## Text to Speach
+## Built-In Text to Speech Synthesis
 
 Bring your logger to life by one single bool flag
 ```python
 log.note('I am alive!', speak=True)
 ```
-and listen to the voice of your logger. A useful option for alerting, informing or speach software development.
+and listen to the voice of your logger. A useful option for alerting, informing or speech synth. development.
 
 <br><br>
 
